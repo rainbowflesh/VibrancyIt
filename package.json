@@ -1,0 +1,116 @@
+{
+  "name": "vibrancyit",
+  "displayName": "VibrancyIT",
+  "description": "VS Code Extension to set window to acrylic or mica by using native render.",
+  "version": "0.0.1",
+  "publisher": "rainbowflesh",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.67.0"
+  },
+  "extensionKind": [
+    "ui"
+  ],
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rainbowflesh/VibrancyIT"
+  },
+  "badges": [
+    {
+      "url": "https://vsmarketplacebadge.apphb.com/version/rainbowflesh.vibrancyit.svg",
+      "description": "Latest Version",
+      "href": "https://marketplace.visualstudio.com/items?itemName=rainbowflesh.vibrancyit"
+    },
+    {
+      "url": "https://vsmarketplacebadge.apphb.com/installs/rainbowflesh.vibrancyit.svg",
+      "description": "Total Downloads",
+      "href": "https://marketplace.visualstudio.com/items?itemName=rainbowflesh.vibrancyit"
+    },
+    {
+      "url": "https://vsmarketplacebadge.apphb.com/rating/rainbowflesh.vibrancyit.svg",
+      "description": "Ratings",
+      "href": "https://marketplace.visualstudio.com/items?itemName=rainbowflesh.vibrancyit"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/rainbowflesh/VibrancyIT/issues",
+    "email": "hikarin522@outlook.jp"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "configuration": {
+      "title": "VibrancyIT configuration",
+      "properties": {
+        "vibrancyit.alpha": {
+          "type": "integer",
+          "default": 255,
+          "description": "Transparency level [1-255]"
+        },
+        "vibrancyit.color.r": {
+          "type": "integer",
+          "default": 0,
+          "description": "Red [1-255]"
+        },
+        "vibrancyit.color.g": {
+          "type": "integer",
+          "default": 0,
+          "description": "Green [1-255]"
+        },
+        "vibrancyit.color.b": {
+          "type": "integer",
+          "default": 0,
+          "description": "Blue [1-255]"
+        },
+        "vibrancyit.step": {
+          "type": "integer",
+          "default": 5,
+          "description": "Increment of alpha"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "vibrancyit.increase",
+        "title": "VibrancyIT: Increase the transparency"
+      },
+      {
+        "command": "vibrancyit.decrease",
+        "title": "VibrancyIT: Decrease the transparency"
+      },
+      {
+        "command": "vibrancyit.maximize",
+        "title": "VibrancyIT: Maximize the transparency"
+      },
+      {
+        "command": "vibrancyit.minimize",
+        "title": "VibrancyIT: Minimize the transparency"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vibrancyit.increase",
+        "key": "ctrl+alt+z"
+      },
+      {
+        "command": "vibrancyit.decrease",
+        "key": "ctrl+alt+c"
+      },
+      {
+        "command": "vibrancyit.minimize",
+        "key": "ctrl+alt+x"
+      }
+    ]
+  },
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {
+    "node-powershell": "^4.0.0"
+  }
+}
