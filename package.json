@@ -50,7 +50,7 @@
       "properties": {
         "vibrancyit.alpha": {
           "type": "integer",
-          "default": 255,
+          "default": 128,
           "description": "Transparency level [1-255]"
         },
         "vibrancyit.color.r": {
